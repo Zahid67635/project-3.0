@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NavLink from "@/components/buttons/NavLink";
 
 const componentsList = [
   { name: "Buttons", href: "/components/buttons" },
@@ -9,11 +9,11 @@ function page() {
   return (
     <div className="flex flex-col min-h-screen gap-5 py-24 px-[20%] bg-slate-100">
       <div className="font-bold text-center">Common Components</div>
-      <ul className="list-disc">
+      <ul className="flex flex-col gap-2 list-disc">
         {componentsList.map((item) => {
           return (
-            <li key={item.name} className="hover:text-green-600">
-              <Link href="/components/navbar">{item.name}</Link>
+            <li key={item.name}>
+              <NavLink href={item.href}>{item.name}</NavLink>
             </li>
           );
         })}
