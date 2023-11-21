@@ -3,6 +3,8 @@ import NavLink from "@/components/buttons/NavLink";
 const componentsList = [
   { name: "Buttons", href: "/components/buttons" },
   { name: "Navbar", href: "/components/navbar" },
+  { name: "SearchAndSelect", href: "/components/searchAndSelect" },
+  { name: "InputField", href: "/components/inputField" },
 ];
 
 function page() {

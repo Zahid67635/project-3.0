@@ -11,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex flex-col gap-6 py-24 px-[5%] md:px-[10%]">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

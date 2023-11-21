@@ -5,7 +5,7 @@ import NavLink from "@/components/buttons/NavLink";
 
 function page() {
   return (
-    <div className="flex flex-col gap-6 py-24 px-[5%] md:px-[10%]">
+    <div>
       <h2 className="text-lg font-semibold text-center">Buttons</h2>
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between p-6 border-2 border-gray-200 border-dashed">
