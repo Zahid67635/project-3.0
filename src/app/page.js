@@ -1,9 +1,10 @@
-import Image from "next/image";
+import NavLink from "@/components/buttons/NavLink";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-3xl font-bold">Lets Start..</h1>
+    <main className="flex flex-col items-center min-h-screen p-24">
+      <h2 className="text-lg font-bold">Edu Wave</h2>
+      <NavLink href="/components">Common Components</NavLink>
     </main>
   );
 }
