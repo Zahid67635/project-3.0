@@ -15,10 +15,11 @@ function Button({
 
   const variants = {
     primary:
-      "h-fit bg-teal-600 hover:bg-teal-700 text-white rounded-md focus:outline-none",
+      "h-fit bg-primary-500 hover:opacity-90 text-white rounded-md focus:outline-none",
     secondary:
-      "h-fit border border-teal-600 hover:bg-teal-50 text-teal-700 rounded-md focus:outline-none",
-    tertiary: "h-fit text-teal-700 hover:text-teal-900 focus:outline-none",
+      "h-fit border border-primary-500 hover:bg-neutral-100 text-primary-500 rounded-md focus:outline-none",
+    tertiary:
+      "h-fit text-primary-500 hover:text-neutral-600 focus:outline-none",
   };
 
   const className = twMerge(
