@@ -2,6 +2,7 @@
 
 import React from "react";
 import Select from "react-select";
+import { twMerge } from "tailwind-merge";
 
 const defaultLabelClassNames =
   "flex items-center justify-between gap-2 text-sm font-medium text-gray-600 mb-1";
@@ -12,7 +13,7 @@ function SearchAndSelect({
   options = [],
   onChange = () => {},
   isClearable = false,
-  extraClassName = "",
+  labelClassName = "",
   placeholder = "",
   ...props
 }) {
@@ -61,7 +62,7 @@ function SearchAndSelect({
   };
   return (
     <section className="w-full">
-      <div className={defaultLabelClassNames}>
+      <div className={twMerge(defaultLabelClassNames, labelClassName)}>
         <label>{label}</label>
       </div>
       <Select
