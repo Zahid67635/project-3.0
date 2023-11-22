@@ -5,6 +5,7 @@ const componentsList = [
   { name: "Navbar", href: "/components/navbar" },
   { name: "SearchAndSelect", href: "/components/searchAndSelect" },
   { name: "InputField", href: "/components/inputField" },
+  { name: "Modal", href: "/components/modal" },
 ];
 
 function page() {
