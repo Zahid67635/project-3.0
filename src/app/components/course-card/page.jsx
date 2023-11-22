@@ -2,7 +2,7 @@ import CourseCard from "@/components/courseCard/CourseCard";
 import courseImage from "../../../images/demo/digital-marketing-demo-image.jpg";
 import teacherImage from "../../../images/demo/teacher-demo-image.jpg";
 
-const page = () => {
+function page() {
   const cardDetails = {
     title: "Learn Complete Digital Marketing",
     teacherName: "MD. Soyeb Chondoni",
@@ -22,6 +22,6 @@ const page = () => {
       <CourseCard cardDetails={cardDetails} />
     </div>
   );
-};
+}
 
 export default page;

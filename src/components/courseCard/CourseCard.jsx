@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   FaStar,
@@ -7,7 +9,8 @@ import {
   FaRegStar,
   FaBookmark,
 } from "react-icons/fa";
-import Button from "@/components/buttons/Button";
+import Link from "next/link";
+import LinkButton from "../buttons/LinkButton";
 
 function CourseCard({ cardDetails }) {
   const {
@@ -29,13 +32,15 @@ function CourseCard({ cardDetails }) {
     <div className="w-full border border-gray-200 shadow sm:w-1/2 lg:w-1/3 group">
       <div className="relative mb-12">
         <div className="w-full overflow-hidden">
-          <Image
-            src={courseImage}
-            alt="course image"
-            width={500}
-            height={500}
-            className="object-cover w-full duration-300 h-52 group-hover:scale-105"
-          />
+          <Link href="">
+            <Image
+              src={courseImage}
+              alt="course image"
+              width={500}
+              height={500}
+              className="object-cover w-full duration-300 h-52 group-hover:scale-105"
+            />
+          </Link>
         </div>
         <div className="absolute flex gap-3 -bottom-9 left-5">
           <div className="p-1 bg-white rounded-full ">
@@ -48,7 +53,9 @@ function CourseCard({ cardDetails }) {
             />
           </div>
           <div className="flex items-end pb-2">
-            <h4 className="font-semibold text-gray-500">{teacherName}</h4>
+            <Link href="">
+              <h4 className="font-semibold text-gray-500">{teacherName}</h4>
+            </Link>
           </div>
         </div>
       </div>
@@ -56,8 +63,10 @@ function CourseCard({ cardDetails }) {
       <div className="mx-5 divide-y-2 divide-gray-200">
         <div className="mb-3 space-y-3">
           <div className="flex justify-between gap-10">
-            <h1 className="text-lg font-bold">{title}</h1>
-            <h2 className="text-lg font-semibold text-blue-500">${price}</h2>
+            <Link href="">
+              <h1 className="text-lg font-bold">{title}</h1>
+            </Link>
+            <h2 className="text-lg font-semibold text-violet-600">${price}</h2>
           </div>
 
           <div className="flex items-center gap-3">
@@ -70,7 +79,9 @@ function CourseCard({ cardDetails }) {
               ))}
             </div>
 
-            <p className="text-sm text-gray-500">({reviews} reviews)</p>
+            <Link href="">
+              <p className="text-sm text-gray-500">({reviews} reviews)</p>
+            </Link>
           </div>
         </div>
 
@@ -87,17 +98,17 @@ function CourseCard({ cardDetails }) {
           </div>
           <div className="cursor-pointer">
             {bookmarked ? (
-              <FaBookmark className="text-blue-500 stroke-2" />
+              <FaBookmark className="stroke-2 text-violet-600" />
             ) : (
-              <FaRegBookmark className="text-blue-500 stroke-2" />
+              <FaRegBookmark className="stroke-2 text-violet-600" />
             )}
           </div>
         </div>
 
         <div className="py-3">
-          <Button size="small" variant="primary">
-            Enroll now
-          </Button>
+          <LinkButton href="" size="small" variant="primary">
+            Enroll Now
+          </LinkButton>
         </div>
       </div>
     </div>
