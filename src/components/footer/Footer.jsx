@@ -14,10 +14,6 @@ function Footer() {
     <footer>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="mb-5">
-            <h1 className="text-xl font-bold">About Us</h1>
-            <hr className="w-1/4 h-1 text-black bg-black" />
-          </div>
           <div className="space-y-2">
             <Logo />
             <p>
@@ -33,7 +29,7 @@ function Footer() {
             <h1 className="text-xl font-bold">Contact Us</h1>
             <hr className="w-1/4 h-1 text-black bg-black" />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h3>
               <b>Address : </b>Unisco university Albany, NY, USA. 11001
             </h3>
@@ -63,9 +59,6 @@ function Footer() {
             </NavLink>
             <NavLink href="/" size="small">
               Testimonials
-            </NavLink>
-            <NavLink href="/" size="small">
-              FAQs
             </NavLink>
           </div>
         </div>
