@@ -8,6 +8,7 @@ const componentsList = [
   { name: "CourseCard", href: "/components/course-card" },
   { name: "Modal", href: "/components/modal" },
   { name: "Logo", href: "/components/logo" },
+  { name: "Footer", href: "/components/footer" },
 ];
 
 function page() {
