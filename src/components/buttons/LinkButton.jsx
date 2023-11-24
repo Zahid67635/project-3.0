@@ -6,7 +6,7 @@ function LinkButton({
   size = "medium",
   children = "Button",
   type = "button",
-  className: extraClasName = "",
+  className: extraClassName = "",
   href = "",
 }) {
   const sizes = {
@@ -17,16 +17,16 @@ function LinkButton({
 
   const variants = {
     primary:
-      "h-fit bg-primary-500 hover:opacity-90 text-white rounded-md focus:outline-none",
-    secondary:
-      "h-fit hover:bg-neutral-100 border border-primary-500 text-primary-500 rounded-md focus:outline-none",
+      "h-fit bg-primary-500 hover:opacity-90 text-white focus:outline-none",
+    outline:
+      "h-fit hover:bg-neutral-100 border border-primary-500 hover:bg-primary-500 text-primary-500 hover:text-white focus:outline-none",
     tertiary:
       "h-fit text-primary-500 hover:text-neutral-600 focus:outline-none",
   };
 
   const className = twMerge(
     variants[variant] + " " + sizes[size],
-    extraClasName
+    extraClassName
   );
 
   return (

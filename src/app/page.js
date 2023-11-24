@@ -1,10 +1,20 @@
-import NavLink from "@/components/buttons/NavLink";
+import Navbar from "@/components/navbar/Navbar";
+import Image from "next/image";
+import banner from "/public/banner/banner2.jpg";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen p-24">
-      <h2 className="text-lg font-bold">Edu Wave</h2>
-      <NavLink href="/components">Common Components</NavLink>
-    </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <div>
+        <Image
+          width={1000}
+          height={900}
+          src={banner}
+          alt="banner"
+          className="object-cover w-full h-[550px]"
+        />
+      </div>
+    </div>
   );
 }

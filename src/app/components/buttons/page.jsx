@@ -37,15 +37,15 @@ function page() {
           </div>
         </div>
         <div className="flex items-center justify-between p-6 border-2 border-gray-200 border-dashed">
-          <h3>Secondary Button</h3>
+          <h3>Outline Button</h3>
           <div className="flex items-center gap-2">
-            <Button size="large" variant="secondary">
+            <Button size="large" variant="outline">
               Button
             </Button>
-            <Button size="medium" variant="secondary">
+            <Button size="medium" variant="outline">
               Button
             </Button>
-            <Button size="small" variant="secondary">
+            <Button size="small" variant="outline">
               Button
             </Button>
           </div>
@@ -70,7 +70,7 @@ function page() {
             <LinkButton href="/" size="large" variant="primary">
               Button
             </LinkButton>
-            <LinkButton size="medium" variant="secondary">
+            <LinkButton size="medium" variant="outline">
               Button
             </LinkButton>
             <LinkButton size="small" variant="tertiary">

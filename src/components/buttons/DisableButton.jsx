@@ -5,7 +5,7 @@ function DisableButton({
   size = "medium",
   children = "Button",
   type = "button",
-  className: extraClasName = "",
+  className: extraClassName = "",
 }) {
   const sizes = {
     large: "px-6 py-4 font-semibold",
@@ -15,15 +15,12 @@ function DisableButton({
 
   const variants = {
     primary:
-      "h-fit bg-primary-500 text-white rounded-md focus:outline-none opacity-50 cursor-not-allowed",
-    secondary:
-      "h-fit border border-primary-500 text-primary-500 rounded-md focus:outline-none",
-    tertiary: "h-fit text-primary-500 focus:outline-none",
+      "h-fit bg-primary-500 text-white focus:outline-none opacity-50 cursor-not-allowed",
   };
 
   const className = twMerge(
     variants[variant] + " " + sizes[size],
-    extraClasName
+    extraClassName
   );
 
   return (

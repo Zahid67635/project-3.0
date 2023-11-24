@@ -5,7 +5,7 @@ function NavLink({
   variant = "primary",
   size = "medium",
   children = "Link",
-  className: extraClasName = "",
+  className: extraClassName = "",
   href = "",
 }) {
   const sizes = {
@@ -21,7 +21,7 @@ function NavLink({
 
   const className = twMerge(
     variants[variant] + " " + sizes[size],
-    extraClasName
+    extraClassName
   );
 
   return (
