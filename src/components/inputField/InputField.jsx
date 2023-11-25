@@ -13,7 +13,7 @@ function InputField({
   name = "",
   label = "",
   labelClassName = "",
-  placeholder = "Give an input field",
+  placeholder = "",
   extraClassName = "",
   value,
   onChange = () => {},
