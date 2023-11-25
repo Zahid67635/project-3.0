@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
-import { twMerge } from "tailwind-merge";
 import { HiMiniXCircle } from "react-icons/hi2";
+import { twMerge } from "tailwind-merge";
 
 const defaultLabelClassNames = "block text-sm font-semibold text-gray-600";
 const defaultClassNames =
-  "mt-1 block w-full font-medium appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-green-600 focus:outline-none focus:ring-green-600 sm:text-sm placeholder:font-normal text-gray-500";
+  "mt-1 block w-full font-medium appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-green-600 sm:text-sm placeholder:font-normal text-gray-500";
 const clearButtonStyle =
   "absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-gray-500";
 
