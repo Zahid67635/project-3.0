@@ -13,9 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col gap-6 py-24 px-[5%] md:px-[10%]">
-          {children}
-        </div>
+        <div className="flex flex-col bg-neutral-50">{children}</div>
       </body>
     </html>
   );
