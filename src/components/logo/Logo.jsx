@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
-import logo from "../../assets/eduwave.png";
 import Link from "next/link";
+import logo from "../../assets/eduwave.png";
 function Logo() {
   return (
     <Link href={`/`}>
@@ -10,7 +9,7 @@ function Logo() {
         width={1000}
         height={1000}
         alt="eduWave"
-        className="object-fill h-10 w-28"
+        className="object-fill w-32 h-10"
       />
     </Link>
   );

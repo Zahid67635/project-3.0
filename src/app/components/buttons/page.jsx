@@ -2,6 +2,7 @@ import Button from "@/components/buttons/Button";
 import DisableButton from "@/components/buttons/DisableButton";
 import LinkButton from "@/components/buttons/LinkButton";
 import NavLink from "@/components/buttons/NavLink";
+import TertiaryLink from "@/components/buttons/TertiaryLink";
 
 function page() {
   return (
@@ -79,7 +80,7 @@ function page() {
           </div>
         </div>
         <div className="flex items-center justify-between p-6 border-2 border-gray-200 border-dashed">
-          <h3>Link</h3>
+          <h3>Nav Link</h3>
           <div className="flex items-center gap-6">
             <NavLink href="/" size="large">
               Link
@@ -90,6 +91,20 @@ function page() {
             <NavLink href="/" size="small">
               Link
             </NavLink>
+          </div>
+        </div>
+        <div className="flex items-center justify-between p-6 border-2 border-gray-200 border-dashed">
+          <h3>Tertiary Link</h3>
+          <div className="flex items-center gap-6">
+            <TertiaryLink href="/" size="large">
+              Link
+            </TertiaryLink>
+            <TertiaryLink href="/" size="medium">
+              Link
+            </TertiaryLink>
+            <TertiaryLink href="/" size="small">
+              Link
+            </TertiaryLink>
           </div>
         </div>
       </div>

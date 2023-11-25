@@ -1,3 +1,4 @@
+"use client";
 import { twMerge } from "tailwind-merge";
 
 function Button({
@@ -10,9 +11,9 @@ function Button({
   onSubmit = () => {},
 }) {
   const sizes = {
-    large: "px-6 py-4 font-semibold",
-    medium: "px-4 py-3 font-medium",
-    small: "px-3 py-2 font-normal",
+    large: "px-6 py-3 font-semibold",
+    medium: "px-4 py-2 font-medium",
+    small: "px-3 py-1 font-normal",
   };
 
   const variants = {
