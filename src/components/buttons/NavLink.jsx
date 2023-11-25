@@ -17,6 +17,7 @@ function NavLink({
   const variants = {
     primary:
       "h-fit w-fit text-primary-500 hover:border-b-2 hover:transition-all hover:border-b-primary-500",
+      "border-b-2 border-transparent h-fit text-primary-500 hover:border-primary-500 hover:transition-colors focus:outline-none",
   };
 
   const className = twMerge(
