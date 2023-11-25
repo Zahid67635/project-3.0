@@ -55,36 +55,37 @@ function Navbar() {
         <div className="items-center hidden w-1/2 md:flex">
           <InputField placeholder="Search" />
         </div>
-      <div
-        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 transform md:hidden ${
-          !isOpen ? "translate-x-full" : ""
-        } transition duration-200 ease-in md:translate-x-full`}
-      >
-        <div className="flex justify-end w-full">
-          <RxCross2
-            onClick={handleTransform}
-            className="text-3xl cursor-pointer text-primary-500"
-          />
+        <div
+          className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 transform md:hidden ${
+            !isOpen ? "translate-x-full" : ""
+          } transition duration-200 ease-in md:translate-x-full`}
+        >
+          <div className="flex justify-end w-full">
+            <RxCross2
+              onClick={handleTransform}
+              className="text-3xl cursor-pointer text-primary-500"
+            />
+          </div>
+          {navItems.map((item) => (
+            <NavLink key={item.name} href={item.href}>
+              {item.name}
+            </NavLink>
+          ))}
+          <div className="flex flex-col gap-4">
+            <Button>Login</Button>
+            <Button variant="secondary">Sign up</Button>
+          </div>
         </div>
-        {navItems.map((item) => (
-          <NavLink key={item.name} href={item.href}>
-            {item.name}
-          </NavLink>
-        ))}
-        <div className="flex flex-col gap-4">
-          <Button>Login</Button>
-          <Button variant="secondary">Sign up</Button>
-        </div>
-      </div>
 
-      <div className="items-center hidden gap-6 md:flex">
-        {navItems.map((item) => (
-          <NavLink key={item.name} href={item.href}>
-            {item.name}
-          </NavLink>
-        ))}
-        <Button>Login</Button>
-        <Button variant="outline">Sign up</Button>
+        <div className="items-center hidden gap-6 md:flex">
+          {navItems.map((item) => (
+            <NavLink key={item.name} href={item.href}>
+              {item.name}
+            </NavLink>
+          ))}
+          <Button>Login</Button>
+          <Button variant="outline">Sign up</Button>
+        </div>
       </div>
     </nav>
   );
