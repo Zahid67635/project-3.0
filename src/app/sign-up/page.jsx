@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import Footer from "@/components/footer/Footer";
-import InputField from "@/components/inputField/InputField";
 import Navbar from "@/components/navbar/Navbar";
 import { useFormik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { FaAt, FaKey, FaUser } from "react-icons/fa";
 import { signUpSchema } from "./signUpSchema";
@@ -52,7 +50,7 @@ function page() {
             </h1>
 
             <label className="flex p-1" htmlFor="name">
-              Username
+              Your Name
               <span className="text-red-500">*</span>
             </label>
             <div className="relative w-full mb-5 ">
@@ -63,7 +61,6 @@ function page() {
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                required
                 placeholder="Your full Name"
                 className="w-full py-2 pl-8 border border-slate-400 focus:outline-slate-500"
               />
@@ -83,7 +80,6 @@ function page() {
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                required
                 placeholder="Your Email"
                 className="w-full py-2 pl-8 border border-slate-400 focus:outline-slate-500"
               />
@@ -103,7 +99,6 @@ function page() {
                 value={values.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                required
                 placeholder="Your Password"
                 className="w-full py-2 pl-8 border border-slate-400 focus:outline-slate-500"
               />
@@ -123,7 +118,6 @@ function page() {
                 value={values.confirm_password}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                required
                 placeholder="Confirm Password"
                 className="w-full py-2 pl-8 border border-slate-400 focus:outline-slate-500"
               />
@@ -136,9 +130,7 @@ function page() {
               <div className="flex items-center">
                 <div className="mr-3 ">
                   <Image
-                    src={`${
-                      userImg ? userImg : "/src/assets/images/profile.jpg"
-                    }`}
+                    src={`${userImg ? userImg : "/profile.jpg"}`}
                     alt=""
                     width={60}
                     height={70}
