@@ -28,29 +28,32 @@ function Navbar() {
         <FaBars onClick={handleTransform} className="cursor-pointer" />
       </div>
 
-      {isOpen && (
-        <div className="absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 transition-transform ease-in-out translate-x-1 bg-neutral-300">
-          <div className="flex justify-end w-full">
-            <RxCross2
-              onClick={() => setIsOpen((prev) => !prev)}
-              className="text-3xl cursor-pointer text-primary-500"
-            />
-          </div>
-          <InputField
-            extraClassName="bg-neutral-300 border-primary-500"
-            placeholder="Search"
+      <div
+        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 transform md:hidden ${
+          !isOpen ? "translate-x-full" : ""
+        } transition duration-200 ease-in md:translate-x-full`}
+      >
+        <div className="flex justify-end w-full">
+          <RxCross2
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="text-3xl cursor-pointer text-primary-500"
           />
-          {navItems.map((item) => (
-            <TertiaryLink key={item.name} href={item.href}>
-              {item.name}
-            </TertiaryLink>
-          ))}
-          <div className="flex flex-col gap-4">
-            <Button>Login</Button>
-            <Button variant="outline">Sign up</Button>
-          </div>
         </div>
-      )}
+        <InputField
+          extraClassName="bg-neutral-300 border-primary-500"
+          placeholder="Search"
+        />
+        {navItems.map((item) => (
+          <TertiaryLink key={item.name} href={item.href}>
+            {item.name}
+          </TertiaryLink>
+        ))}
+        <div className="flex flex-col gap-4">
+          <Button>Login</Button>
+          <Button variant="outline">Sign up</Button>
+        </div>
+      </div>
+
       <div className="items-center justify-end hidden w-4/5 gap-6 md:flex">
         <div className="items-center hidden w-1/2 md:flex">
           <InputField placeholder="Search" />
