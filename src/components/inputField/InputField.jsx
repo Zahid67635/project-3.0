@@ -14,7 +14,7 @@ function InputField({
   name = "",
   label = "",
   labelClassName = "",
-  placeholder = "Give an input field",
+  placeholder = "",
   extraClassName = "",
   value,
   onChange = () => {},
@@ -31,7 +31,7 @@ function InputField({
   };
 
   return (
-    <div className="relative w-full">
+    <div className="w-full">
       <label
         htmlFor={name}
         className={twMerge(defaultLabelClassNames, labelClassName)}
