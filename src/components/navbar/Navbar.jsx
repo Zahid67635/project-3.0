@@ -16,7 +16,6 @@ function Navbar() {
   const handleTransform = () => {
     setIsOpen(!isOpen);
   };
-  console.log(isOpen);
   return (
     <nav className="flex justify-between w-full">
       <div className="flex items-center">
@@ -27,7 +26,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 transform ${
+        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 transform md:hidden ${
           !isOpen ? "translate-x-full" : ""
         } transition duration-200 ease-in md:translate-x-full`}
       >
