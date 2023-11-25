@@ -1,5 +1,5 @@
 import React from "react";
-import { HiMiniXCircle } from "react-icons/hi2";
+import { HiOutlineXCircle } from "react-icons/hi";
 
 function Modal({ isOpen, setIsOpen, children }) {
   const closeModal = () => {
@@ -15,7 +15,7 @@ function Modal({ isOpen, setIsOpen, children }) {
           <div className="absolute max-w-lg p-8 bg-white rounded-lg shadow-lg">
             <div className="flex justify-end">
               <div className={`cursor-pointer`} onClick={closeModal}>
-                <HiMiniXCircle className="text-2xl transition duration-300 ease-in-out hover:text-slate-400" />
+                <HiOutlineXCircle className="text-2xl transition duration-300 ease-in-out rounded-full hover:bg-slate-700 hover:text-white" />
               </div>
             </div>
 
