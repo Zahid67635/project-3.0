@@ -54,8 +54,8 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="items-center justify-end hidden w-4/5 gap-6 md:flex">
-        <div className="items-center hidden w-1/2 md:flex">
+      <div className="items-center justify-end hidden w-full gap-6 md:flex">
+        <div className="items-center hidden md:flex">
           <InputField placeholder="Search" />
         </div>
         <div
