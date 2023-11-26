@@ -1,9 +1,9 @@
 import NavLink from "../buttons/NavLink";
 import Logo from "../logo/Logo";
-import facebook from "../../assets/images/icons/social-media/facebook.png";
-import twitter from "../../assets/images/icons/social-media/twitter.png";
-import instagram from "../../assets/images/icons/social-media/instagram.png";
-import linkedIn from "../../assets/images/icons/social-media/linkedin.png";
+import facebook from "../../../public/icons/social-media/facebook.png";
+import twitter from "../../../public/icons/social-media/twitter.png";
+import instagram from "../../../public/icons/social-media/instagram.png";
+import linkedIn from "../../../public/icons/social-media/linkedin.png";
 import Image from "next/image";
 import Link from "next/link";
 

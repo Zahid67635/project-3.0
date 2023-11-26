@@ -9,7 +9,7 @@ export default function Home() {
         <Image
           width={1000}
           height={900}
-          src="/banner/banner2.jpg"
+          src="/banners/banner2.jpg"
           alt="banner"
           className="object-cover w-full h-80 sm:h-[550px]"
         />
