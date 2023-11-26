@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="p-1">{children}</div>
         <div className="flex flex-col bg-neutral-50">{children}</div>
       </body>
     </html>
