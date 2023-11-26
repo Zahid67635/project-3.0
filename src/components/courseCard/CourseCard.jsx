@@ -106,7 +106,7 @@ function CourseCard({ cardDetails }) {
         </div>
 
         <div className="py-3">
-          <LinkButton href="" size="small" variant="primary">
+          <LinkButton href="" size="small" variant="outline">
             Enroll Now
           </LinkButton>
         </div>

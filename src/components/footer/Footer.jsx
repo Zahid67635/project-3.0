@@ -83,9 +83,9 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="h-[2px] text-black bg-black my-5" />
+      <hr className="h-[2px] text-black bg-black mt-5" />
 
-      <div className="flex flex-col items-center justify-between text-sm lg:flex-row">
+      <div className="flex flex-col items-center justify-between py-5 text-sm lg:flex-row">
         <p className="text-center">
           Copyright &copy; 2023 Edu Wave | Developed by Code House. All Rights
           Reserved
