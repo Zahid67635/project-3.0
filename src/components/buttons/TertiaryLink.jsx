@@ -5,7 +5,7 @@ function TertiaryLink({
   variant = "primary",
   size = "medium",
   children = "Link",
-  className: extraClassName = "",
+  extraClassName = "",
   href = "",
 }) {
   const sizes = {
