@@ -2,23 +2,13 @@ import CourseCard from "@/components/courseCard/CourseCard";
 import CourseTitle from "@/components/courses/CourseTitle";
 import courseImage from "../../../public/images/demo/digital-marketing-demo-image.jpg";
 import teacherImage from "../../../public/images/demo/teacher-demo-image.jpg";
-import SearchAndSelect from "@/components/searchAndSelect/SearchAndSelect";
 import Button from "@/components/buttons/Button";
-import { BsFilter, BsArrowRight } from "react-icons/bs";
-import LinkButton from "@/components/buttons/LinkButton";
+import { BsFilter } from "react-icons/bs";
+import InputField from "@/components/inputField/InputField";
+import Image from "next/image";
+import Link from "next/link";
 
 function page() {
-  const courseCategories = [
-    { id: 1, name: "Language Learning", courses: 10 },
-    { id: 2, name: "Skill & IT", courses: 12 },
-    { id: 3, name: "Career Readiness", courses: 20 },
-    { id: 4, name: "Freelancing", courses: 18 },
-    { id: 5, name: "Design & Creative", courses: 8 },
-    { id: 6, name: "Kids (Age : 7-14)", courses: 11 },
-    { id: 8, name: "Professional", courses: 14 },
-    { id: 9, name: "Free", courses: 5 },
-  ];
-
   const cardDetails = {
     title: "Learn Complete Digital Marketing",
     teacherName: "MD. Soyeb Chondoni",
@@ -38,27 +28,15 @@ function page() {
         Courses
       </div>
 
-      <section className="space-y-4">
-        <CourseTitle courseTitle="Explore Course Categories" />
-        <div className="flex gap-3">
-          {courseCategories.map((course) => (
-            <div
-              key={course.id}
-              className="px-3 py-2 border border-primary-500"
-            >
-              <h3>{course.name}</h3>
-              <p>Courses : {course.courses}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="flex items-center justify-between">
         <p className="text-sm text-neutral-500">
-          Showing 1-6 results of 100 results
+          Showing 1-12 results of 100 results
         </p>
         <div className="flex items-center gap-5">
-          <SearchAndSelect placeholder="Search courses" />
+          <InputField
+            placeholder="Search Courses"
+            extraClassName="rounded-none mt-0 bg-transparent border border-primary-500  text-primary-500 focus:outline-none transition-all py-1.5"
+          />
           <Button
             size="small"
             variant="outline"
@@ -76,16 +54,23 @@ function page() {
             <CourseCard key={item} cardDetails={cardDetails} />
           ))}
         </div>
-        <div className="flex items-center justify-center">
-          <LinkButton
-            href=""
-            size="small"
-            variant="outline"
-            className="flex items-center gap-3"
-          >
-            <span>See all</span>
-            <BsArrowRight />
-          </LinkButton>
+      </section>
+
+      <section className="space-y-4">
+        <CourseTitle courseTitle="Graphic Design" courses={8} />
+        <div className="flex gap-5">
+          {[...Array(4).keys()].map((item) => (
+            <CourseCard key={item} cardDetails={cardDetails} />
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <CourseTitle courseTitle="Digital Marketing" courses={5} />
+        <div className="flex gap-5">
+          {[...Array(4).keys()].map((item) => (
+            <CourseCard key={item} cardDetails={cardDetails} />
+          ))}
         </div>
       </section>
 
@@ -94,23 +79,21 @@ function page() {
           courseTitle="Our Popular Teachers"
           extraClassName="justify-center"
         />
-        <div className="flex gap-5">
+        <div className="grid grid-cols-4 gap-5">
           {[...Array(4).keys()].map((item) => (
-            <div key={item} className="w-1/4 h-40 border">
-              <p>image</p>
-            </div>
+            <Link key={item} href="">
+              <div className="relative">
+                <Image
+                  src="https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg?w=826&t=st=1701178529~exp=1701179129~hmac=8ce831d53fce52b4fcd7ccd05c25327ef4415af2df01f18f37c5aa7232e124f9"
+                  width={500}
+                  height={500}
+                />
+                <div className="absolute w-full h-full bg-gradient-to-t from-[#151515] to-[rgba(21, 21, 21, 0)] top-0 text-white flex justify-center items-end">
+                  <h1 className="mb-8 text-xl font-bold">Jhankar Mahbub</h1>
+                </div>
+              </div>
+            </Link>
           ))}
-        </div>
-        <div className="flex items-center justify-center">
-          <LinkButton
-            href=""
-            size="small"
-            variant="outline"
-            className="flex items-center gap-3"
-          >
-            <span>See all</span>
-            <BsArrowRight />
-          </LinkButton>
         </div>
       </section>
     </div>
