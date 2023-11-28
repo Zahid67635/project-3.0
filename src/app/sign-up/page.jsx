@@ -42,7 +42,7 @@ function page() {
     <div className="px-2 bg-white">
       <Navbar />
       <div className="flex py-10">
-        <div className="w-3/5">
+        <div className="hidden w-3/5 md:block">
           <Image
             src={"/images/signup.jpg"}
             width={1000}
@@ -51,20 +51,20 @@ function page() {
             className="object-contain w-4/5 h-full"
           />
         </div>
-        <div className="relative flex flex-col justify-center w-2/5 max-w-lg my-4 bg-transparent rounded-xl">
+        <div className="relative flex flex-col justify-center max-w-lg mx-auto my-4 bg-transparent md:mx-0 md:w-2/5 rounded-xl">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col justify-center w-full px-4 pb-2"
+            className="flex flex-col justify-center w-full gap-5 px-4 pb-2"
           >
-            <h1 className="mb-8 text-3xl font-bold text-center text-primary-600">
+            <h1 className="text-3xl font-bold text-center text-primary-600">
               SignUp
             </h1>
 
-            <label className="flex p-1" htmlFor="name">
-              Your Name
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="relative w-full mb-5 ">
+            <div className="relative w-full ">
+              <label className="flex p-1" htmlFor="name">
+                Your Name
+                <span className="text-red-500">*</span>
+              </label>
               <InputField
                 type="text"
                 name="name"
@@ -81,11 +81,12 @@ function page() {
                 <p className="pl-2 text-red-500">{errors.name}</p>
               ) : null}
             </div>
-            <label className="flex p-1" htmlFor="email">
-              Email
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="relative w-full mb-5 ">
+
+            <div className="relative w-full ">
+              <label className="flex p-1" htmlFor="email">
+                Email
+                <span className="text-red-500">*</span>
+              </label>
               <InputField
                 type="text"
                 name="email"
@@ -101,11 +102,12 @@ function page() {
                 <p className="pl-2 text-red-500">{errors.email}</p>
               ) : null}
             </div>
-            <label className="flex p-1" htmlFor="password">
-              Password
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="relative w-full mb-5 ">
+
+            <div className="relative w-full ">
+              <label className="flex p-1" htmlFor="password">
+                Password
+                <span className="text-red-500">*</span>
+              </label>
               <InputField
                 type="password"
                 name="password"
@@ -121,11 +123,12 @@ function page() {
                 <p className="pl-2 text-red-500">{errors.password}</p>
               ) : null}
             </div>
-            <label className="flex p-1" htmlFor="confirm_password">
-              Confirm Password
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="relative w-full mb-5 ">
+
+            <div className="relative w-full ">
+              <label className="flex p-1" htmlFor="confirm_password">
+                Confirm Password
+                <span className="text-red-500">*</span>
+              </label>
               <InputField
                 type="password"
                 name="confirm_password"
@@ -141,7 +144,7 @@ function page() {
                 <p className="pl-2 text-red-500">{errors.confirm_password}</p>
               ) : null}
             </div>
-            <div className="w-full mb-4 text-slate-600">
+            <div className="w-full text-slate-600">
               <span className="mb-4">Upload Your Image </span>
               <div className="flex py-1 items-">
                 <div className="mr-3">
@@ -168,7 +171,7 @@ function page() {
               <legend className="px-2 py-1 font-semibold text-white rounded bg-primary-500">
                 Select your role
               </legend>
-              <div className="flex items-center mb-5">
+              <div className="flex items-center pb-2">
                 <input
                   type="radio"
                   id="role1"
@@ -201,7 +204,7 @@ function page() {
 
             <button
               type="submit"
-              className="w-full p-1 py-2 mx-auto mt-4 font-semibold text-white transition duration-300 outline outline-1 outline-black bg-primary-500 hover:bg-white hover:text-black hover:outline-primary-500 text-semibold"
+              className="w-full p-1 py-2 mx-auto font-semibold text-white transition duration-300 outline outline-1 outline-black bg-primary-500 hover:bg-white hover:text-black hover:outline-primary-500 text-semibold"
             >
               SignUp
             </button>
