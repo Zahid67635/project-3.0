@@ -1,3 +1,5 @@
+"use client";
+
 import CourseCard from "@/components/courseCard/CourseCard";
 import CourseTitle from "@/components/courses/CourseTitle";
 import courseImage from "../../../public/images/demo/digital-marketing-demo-image.jpg";
@@ -7,8 +9,22 @@ import { BsFilter } from "react-icons/bs";
 import InputField from "@/components/inputField/InputField";
 import Image from "next/image";
 import Link from "next/link";
+import { RxCross2 } from "react-icons/rx";
+import TertiaryLink from "@/components/buttons/TertiaryLink";
+import { useState } from "react";
 
-function page() {
+const navItems = [
+  { name: "Courses", href: "/courses" },
+  { name: "Instructors", href: "/instructors" },
+];
+
+function Page() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleTransform = () => {
+    setIsOpen(!isOpen);
+  };
+
   const cardDetails = {
     title: "Learn Complete Digital Marketing",
     teacherName: "MD. Soyeb Chondoni",
@@ -23,7 +39,33 @@ function page() {
   };
 
   return (
-    <div className="space-y-10">
+    <div className="relative space-y-10">
+      <div
+        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 ${
+          !isOpen ? "hidden" : "block"
+        }`}
+      >
+        <div className="flex justify-end w-full">
+          <RxCross2
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="text-3xl cursor-pointer text-primary-500"
+          />
+        </div>
+        <InputField
+          extraClassName="bg-neutral-300 border-primary-500"
+          placeholder="Search"
+        />
+        {navItems.map((item) => (
+          <TertiaryLink key={item.name} href={item.href}>
+            {item.name}
+          </TertiaryLink>
+        ))}
+        <div className="flex flex-col gap-4">
+          <Button>Login</Button>
+          <Button variant="outline">Sign up</Button>
+        </div>
+      </div>
+
       <div className="flex items-center justify-center h-32 text-3xl font-bold text-white bg-primary-500">
         Courses
       </div>
@@ -42,14 +84,14 @@ function page() {
             variant="outline"
             className="flex items-center gap-2"
           >
-            <span>Filters</span> <BsFilter />
+            <span onClick={handleTransform}>Filters</span> <BsFilter />
           </Button>
         </div>
       </section>
 
       <section className="space-y-4">
         <CourseTitle courseTitle="Language Learning" courses={10} />
-        <div className="flex gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4).keys()].map((item) => (
             <CourseCard key={item} cardDetails={cardDetails} />
           ))}
@@ -58,7 +100,7 @@ function page() {
 
       <section className="space-y-4">
         <CourseTitle courseTitle="Graphic Design" courses={8} />
-        <div className="flex gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4).keys()].map((item) => (
             <CourseCard key={item} cardDetails={cardDetails} />
           ))}
@@ -67,7 +109,7 @@ function page() {
 
       <section className="space-y-4">
         <CourseTitle courseTitle="Digital Marketing" courses={5} />
-        <div className="flex gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4).keys()].map((item) => (
             <CourseCard key={item} cardDetails={cardDetails} />
           ))}
@@ -79,7 +121,7 @@ function page() {
           courseTitle="Our Popular Teachers"
           extraClassName="justify-center"
         />
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4).keys()].map((item) => (
             <Link key={item} href="">
               <div className="relative">
@@ -100,4 +142,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

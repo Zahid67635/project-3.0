@@ -29,7 +29,7 @@ function CourseCard({ cardDetails }) {
   const emptyStars = 5 - stars;
 
   return (
-    <div className="w-full border border-gray-200 shadow sm:w-1/2 lg:w-1/3 group">
+    <div className="w-full border border-gray-200 shadow group">
       <div className="relative mb-12">
         <div className="w-full overflow-hidden">
           <Link href="">
