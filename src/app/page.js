@@ -10,7 +10,7 @@ export default function Home() {
           height={900}
           src="/banners/banner2.jpg"
           alt="banner"
-          className="object-cover sm:h-[615px]"
+          className="object-cover h-[60vh] xl:h-[90vh]"
         />
         <div className="absolute w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] top-0 text-white flex items-center">
           <div className="w-full mx-5 space-y-2 md:space-y-5 md:ml-10 md:mr-0 md:w-1/2">
