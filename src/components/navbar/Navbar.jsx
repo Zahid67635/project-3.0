@@ -20,7 +20,7 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="flex justify-between w-full p-4 bg-white">
+    <nav className="flex justify-between w-full py-4 bg-white">
       <div className="flex items-center w-1/5">
         <Logo />
       </div>

@@ -1,21 +1,19 @@
 import Button from "@/components/buttons/Button";
-import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <div className="relative">
+      <div className="relative w-full">
         <Image
-          width={1000}
+          width={1550}
           height={900}
           src="/banners/banner2.jpg"
           alt="banner"
-          className="object-cover w-full h-80 sm:h-[550px]"
+          className="object-cover sm:h-[615px]"
         />
         <div className="absolute w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] top-0 text-white flex items-center">
-          <div className="w-1/2 ml-10 space-y-5">
+          <div className="w-full mx-5 space-y-2 md:space-y-5 md:ml-10 md:mr-0 md:w-1/2">
             <h2 className="text-3xl font-bold">lorem ipsum dolor sit amet</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
