@@ -44,14 +44,14 @@ function Page() {
         Courses
       </div>
 
-      <section className="flex items-center justify-between">
+      <section className="flex flex-col justify-between gap-3 md:items-center md:flex-row">
         <p className="text-sm text-neutral-500">
           Showing 1-12 results of 100 results
         </p>
         <div className="flex items-center gap-5">
           <InputField
             placeholder="Search Courses"
-            extraClassName="rounded-none mt-0 bg-transparent border border-primary-500  text-primary-500 focus:outline-none transition-all py-1.5"
+            extraClassName="rounded-none mt-0 bg-transparent border border-primary-500  text-primary-500 focus:outline-none transition-all py-1 sm:py-1.5"
           />
           <Button
             size="small"
