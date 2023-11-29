@@ -1,7 +1,11 @@
 "use client";
 import { FaAngleLeft, FaBars } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
+import { GoArrowLeft } from "react-icons/go";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
 
+import { categories } from "@/data";
 import { useState } from "react";
 import Button from "../buttons/Button";
 import NavLink from "../buttons/NavLink";
@@ -18,17 +22,64 @@ const navItems = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCategories, setIsCategories] = useState(false);
+  const [desktopCategories, setDesktopCategories] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const handleTransform = () => {
     setIsOpen((prev) => !prev);
   };
+
   return (
-    <nav className="flex justify-between w-full p-4 bg-white">
+    <nav className="flex justify-between w-full px-4 py-2 bg-white border-b border-neutral-500">
       {/* Logo */}
-      <div className="flex items-center w-1/5">
+      <div className="flex items-center lg:w-1/5">
         <Logo />
       </div>
+
+      <div className="items-center justify-end hidden gap-6 lg:w-4/5 lg:flex">
+        <div className="w-1/3">
+          <InputField
+            extraClassName="rounded-full items-center hidden flex-end lg:flex"
+            placeholder="Search"
+          />
+        </div>
+        <div className="flex items-center gap-6">
+          {desktopCategories && (
+            <div
+              onMouseOver={() => setDesktopCategories(true)}
+              onMouseOut={() => setDesktopCategories(false)}
+              className="absolute z-10 flex flex-col px-6 py-4 bg-white shadow-2xl top-16 shadow-neutral-900"
+            >
+              {categories.map((item) => (
+                <TertiaryLink key={item.id} extraClassName="w-full">
+                  {item.name}
+                </TertiaryLink>
+              ))}
+            </div>
+          )}
+          <div
+            onMouseOver={() => setDesktopCategories((prev) => !prev)}
+            onMouseOut={() => setDesktopCategories((prev) => !prev)}
+            className="flex items-center gap-1 py-4 border-b-2 border-transparent cursor-pointer"
+          >
+            <p className="font-medium text-primary-500">Categories</p>
+            <IoIosArrowDown className="font-medium" />
+          </div>
+          {navItems.map((item) => (
+            <NavLink key={item.name} href={item.href}>
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
+        <Button>Login</Button>
+        <Button variant="outline">Sign up</Button>
+      </div>
+
       {/* Hamburger Icon */}
-      <div className="flex items-center lg:hidden">
+      <div className="flex items-center gap-6 lg:hidden">
+        <IoSearch
+          onClick={() => setShowSearch((prev) => !prev)}
+          className="text-xl cursor-pointer"
+        />
         <FaBars onClick={handleTransform} className="cursor-pointer" />
       </div>
 
@@ -69,23 +120,27 @@ function Navbar() {
         </div>
       </RightSideDrawer>
 
-      <div className="items-center justify-end hidden w-4/5 gap-6 lg:flex">
-        <div className="w-1/3">
-          <InputField
-            extraClassName="rounded-full items-center hidden flex-end lg:flex"
-            placeholder="Search"
-          />
+      {showSearch && (
+        <div className="absolute top-0 bottom-0 left-0 right-0 z-50 h-screen bg-white">
+          <div className="flex items-center gap-2 p-3 border-b-4 border-neutral-300">
+            <GoArrowLeft
+              className="text-lg font-bold"
+              onClick={() => setShowSearch(false)}
+            />
+            <input
+              type="text"
+              placeholder="Search Courses"
+              className="w-full py-1 border-none outline-none"
+            />
+          </div>
         </div>
-        {navItems.map((item) => (
-          <NavLink key={item.name} href={item.href}>
-            {item.name}
-          </NavLink>
-        ))}
-        <Button>Login</Button>
-        <Button variant="outline">Sign up</Button>
-      </div>
+      )}
     </nav>
   );
 }
 
 export default Navbar;
+
+{
+  /*  */
+}

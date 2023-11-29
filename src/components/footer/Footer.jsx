@@ -1,11 +1,11 @@
-import NavLink from "../buttons/NavLink";
-import Logo from "../logo/Logo";
-import facebook from "../../assets/images/icons/social-media/facebook.png";
-import twitter from "../../assets/images/icons/social-media/twitter.png";
-import instagram from "../../assets/images/icons/social-media/instagram.png";
-import linkedIn from "../../assets/images/icons/social-media/linkedin.png";
 import Image from "next/image";
 import Link from "next/link";
+import facebook from "../../assets/images/icons/social-media/facebook.png";
+import instagram from "../../assets/images/icons/social-media/instagram.png";
+import linkedIn from "../../assets/images/icons/social-media/linkedin.png";
+import twitter from "../../assets/images/icons/social-media/twitter.png";
+import NavLink from "../buttons/NavLink";
+import Logo from "../logo/Logo";
 
 const socialMedia = [facebook, twitter, instagram, linkedIn];
 
@@ -69,9 +69,10 @@ function Footer() {
             <hr className="w-1/4 h-1 text-black bg-black" />
           </div>
           <div className="flex gap-3">
-            {socialMedia.map((media) => (
-              <Link key={media} href="">
+            {socialMedia.map((media, index) => (
+              <Link key={index} href="">
                 <Image
+                  alt="img"
                   src={media}
                   width={500}
                   height={500}

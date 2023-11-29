@@ -54,19 +54,61 @@ export const courseCardData = [
     students: 100,
     bookmarked: false,
   },
-
-  //   {
-  //     id: 6,
-  //     title: "Complete Web Development",
-  //     teacherName: "Sumit Shaha",
-  //     courseImage:
-  //       "https://img.freepik.com/free-vector/programming-concept-illustration_114360-1213.jpg?w=740&t=st=1701097379~exp=1701097979~hmac=0cb7d55c2a63a833c897f577c6e0a535be5eb140bec9caa5d5590a5cd4b87d69",
-  //     teacherImage: "https://img-b.udemycdn.com/user/200_H/31334738_a13c_3.jpg",
-  //     price: 500,
-  //     stars: 3,
-  //     reviews: 5,
-  //     lessons: 10,
-  //     students: 100,
-  //     bookmarked: false,
-  //   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    name: "All Courses",
+    href: "/courses",
+  },
+  {
+    id: 2,
+    name: "Spoken English",
+    href: "/categories/spoken-english",
+  },
+  {
+    id: 3,
+    name: "Web Development",
+    href: "/categories/web-development",
+  },
+  {
+    id: 4,
+    name: "Digital Marketing",
+    href: "/categories/digital-marketing",
+  },
+  {
+    id: 5,
+    name: "Design & Creative",
+    href: "/categories/graphic-design",
+  },
+  {
+    id: 6,
+    name: "Freelancing",
+    href: "/categories/graphic-design",
+  },
+  {
+    id: 7,
+    name: "Language Learning",
+    href: "/categories/language-learning",
+  },
+];
+
+export const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1.5,
+  },
+};

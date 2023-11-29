@@ -5,3 +5,8 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+.react-multi-carousel-track {
+  display: flex;
+  gap: 20px;
+}
