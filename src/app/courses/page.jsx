@@ -39,33 +39,7 @@ function Page() {
   };
 
   return (
-    <div className="relative space-y-10">
-      <div
-        className={`absolute top-0 bottom-0 right-0 z-10 flex flex-col w-2/3 gap-2 px-6 py-8 bg-neutral-300 ${
-          !isOpen ? "hidden" : "block"
-        }`}
-      >
-        <div className="flex justify-end w-full">
-          <RxCross2
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="text-3xl cursor-pointer text-primary-500"
-          />
-        </div>
-        <InputField
-          extraClassName="bg-neutral-300 border-primary-500"
-          placeholder="Search"
-        />
-        {navItems.map((item) => (
-          <TertiaryLink key={item.name} href={item.href}>
-            {item.name}
-          </TertiaryLink>
-        ))}
-        <div className="flex flex-col gap-4">
-          <Button>Login</Button>
-          <Button variant="outline">Sign up</Button>
-        </div>
-      </div>
-
+    <div className="space-y-10">
       <div className="flex items-center justify-center h-32 text-3xl font-bold text-white bg-primary-500">
         Courses
       </div>

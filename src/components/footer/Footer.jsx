@@ -12,7 +12,7 @@ const socialMedia = [facebook, twitter, instagram, linkedIn];
 function Footer() {
   return (
     <footer>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 px-5 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="space-y-2">
             <Logo />
@@ -85,7 +85,7 @@ function Footer() {
 
       <hr className="h-[2px] text-black bg-black mt-5" />
 
-      <div className="flex flex-col items-center justify-between py-5 text-sm lg:flex-row">
+      <div className="flex flex-col items-center justify-between p-5 text-sm lg:flex-row">
         <p className="text-center">
           Copyright &copy; 2023 Edu Wave | Developed by Code House. All Rights
           Reserved
