@@ -8,7 +8,6 @@ import Link from "next/link";
 import React from "react";
 import { FaAt, FaGraduationCap, FaKey } from "react-icons/fa";
 import { loginSchema } from "./loginSchema";
-import Image from "next/image";
 
 function page() {
   const initialValues = {
@@ -20,6 +19,7 @@ function page() {
       initialValues: initialValues,
       validationSchema: loginSchema,
       onSubmit: (values, action) => {
+        console.log(values);
         action.resetForm();
       },
     });
@@ -27,7 +27,9 @@ function page() {
     <div className="flex flex-col items-center min-h-screen gap-5 py-10 md:justify-center md:py-0">
       <Link href={`/`} className="flex items-center justify-center">
         <FaGraduationCap className="w-20 h-12" fill="#7c3aed" />
-        <span className="text-4xl font-bold text-gray-600">eduwave</span>
+        <span className="font-serif text-4xl font-bold text-gray-600">
+          eduwave
+        </span>
       </Link>
       <div className="relative w-full bg-transparent rounded-xl">
         <form
