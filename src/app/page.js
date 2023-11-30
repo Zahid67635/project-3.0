@@ -4,15 +4,13 @@ import "react-multi-carousel/lib/styles.css";
 
 import LinkButton from "@/components/buttons/LinkButton";
 import CourseCard from "@/components/courseCard/CourseCard";
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
+
 import { categories, courseCardData, responsive } from "@/data";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
       <div className="relative">
         <Image
           width={1000}
@@ -88,10 +86,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-10">
-        <Footer />
-      </div>
     </div>
   );
 }
-
