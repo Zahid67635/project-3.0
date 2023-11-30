@@ -1,22 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
-  FaStar,
   FaBookOpen,
-  FaUsers,
+  FaBookmark,
   FaRegBookmark,
   FaRegStar,
-  FaBookmark,
+  FaStar,
+  FaUsers,
 } from "react-icons/fa";
-import Link from "next/link";
+import cImage from "../../../public/images/demo/digital-marketing-demo-image.jpg";
+import tImage from "../../../public/images/demo/teacher-demo-image.jpg";
 import LinkButton from "../buttons/LinkButton";
 
 function CourseCard({ cardDetails }) {
   const {
     title,
-    teacherImage,
-    courseImage,
+    teacherImage = tImage,
+    courseImage = cImage,
     teacherName,
     price,
     stars,
