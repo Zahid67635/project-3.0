@@ -1,20 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-import facebook from "../../assets/images/icons/social-media/facebook.png";
-import instagram from "../../assets/images/icons/social-media/instagram.png";
-import linkedIn from "../../assets/images/icons/social-media/linkedin.png";
-import twitter from "../../assets/images/icons/social-media/twitter.png";
 import NavLink from "../buttons/NavLink";
 import Logo from "../logo/Logo";
+import facebook from "../../../public/icons/social-media/facebook.png";
+import twitter from "../../../public/icons/social-media/twitter.png";
+import instagram from "../../../public/icons/social-media/instagram.png";
+import linkedIn from "../../../public/icons/social-media/linkedin.png";
+import Image from "next/image";
+import Link from "next/link";
+import TertiaryLink from "../buttons/TertiaryLink";
 
 const socialMedia = [facebook, twitter, instagram, linkedIn];
 
 function Footer() {
   return (
     <footer>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 py-20 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="space-y-2">
+          <div className="space-y-5">
             <Logo />
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea atque
@@ -48,18 +49,18 @@ function Footer() {
             <hr className="w-1/4 h-1 text-black bg-black" />
           </div>
           <div className="flex flex-col">
-            <NavLink href="/" size="small">
+            <TertiaryLink href="/" size="small" className="inline">
               Available Courses
-            </NavLink>
-            <NavLink href="/" size="small">
+            </TertiaryLink>
+            <TertiaryLink href="/" size="small">
               Become an Instructor
-            </NavLink>
-            <NavLink href="/" size="small">
+            </TertiaryLink>
+            <TertiaryLink href="/" size="small">
               Blogs ans News
-            </NavLink>
-            <NavLink href="/" size="small">
+            </TertiaryLink>
+            <TertiaryLink href="/" size="small">
               Testimonials
-            </NavLink>
+            </TertiaryLink>
           </div>
         </div>
 
@@ -84,9 +85,9 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="h-[2px] text-black bg-black my-5" />
+      <hr className="h-[2px] text-black bg-black" />
 
-      <div className="flex flex-col items-center justify-between text-sm lg:flex-row">
+      <div className="flex flex-col items-center justify-between my-5 text-sm lg:flex-row">
         <p className="text-center">
           Copyright &copy; 2023 Edu Wave | Developed by Code House. All Rights
           Reserved
