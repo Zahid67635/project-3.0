@@ -1,6 +1,6 @@
 import CourseCard from "@/components/courseCard/CourseCard";
-import courseImage from "../../../images/demo/digital-marketing-demo-image.jpg";
-import teacherImage from "../../../images/demo/teacher-demo-image.jpg";
+import courseImage from "../../../../public/images/demo/digital-marketing-demo-image.jpg";
+import teacherImage from "../../../../public/images/demo/teacher-demo-image.jpg";
 
 function page() {
   const cardDetails = {
