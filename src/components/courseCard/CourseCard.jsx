@@ -32,7 +32,7 @@ function CourseCard({ cardDetails }) {
 
   return (
     <div className="w-full border border-gray-200 shadow group">
-      <div className="relative mb-12">
+      <div className="relative mb-10 lg:mb-12">
         <div className="w-full overflow-hidden">
           <Link href="">
             <Image
@@ -40,11 +40,11 @@ function CourseCard({ cardDetails }) {
               alt="course image"
               width={500}
               height={500}
-              className="object-cover w-full duration-300 h-52 group-hover:scale-105"
+              className="object-cover w-full h-20 duration-300 md:h-28 lg:h-52 group-hover:scale-105"
             />
           </Link>
         </div>
-        <div className="absolute flex gap-3 -bottom-9 left-5">
+        <div className="absolute flex gap-1 lg:gap-3 -bottom-9 left-2 lg:left-5">
           <div className="p-1 bg-white rounded-full ">
             <Image
               src={teacherImage}
@@ -54,7 +54,7 @@ function CourseCard({ cardDetails }) {
               className="object-cover w-16 h-16 rounded-full"
             />
           </div>
-          <div className="flex items-end pb-2">
+          <div className="flex items-end pb-2 text-sm lg:text-base">
             <Link href="">
               <h4 className="font-semibold text-gray-500">{teacherName}</h4>
             </Link>
@@ -62,11 +62,11 @@ function CourseCard({ cardDetails }) {
         </div>
       </div>
 
-      <div className="mx-5 divide-y-2 divide-gray-200">
-        <div className="mb-3 space-y-3">
-          <div className="flex justify-between gap-10">
+      <div className="mx-3 divide-y-2 divide-gray-200 lg:mx-5">
+        <div className="mb-2 space-y-2 lg:mb-3 lg:space-y-3">
+          <div className="flex justify-between gap-5 lg:gap-10">
             <Link href="">
-              <h1 className="text-lg font-bold">{title}</h1>
+              <h1 className="font-bold lg:text-lg">{title}</h1>
             </Link>
             <h2 className="text-lg font-semibold text-violet-600">${price}</h2>
           </div>
@@ -87,13 +87,13 @@ function CourseCard({ cardDetails }) {
           </div>
         </div>
 
-        <div className="flex items-center justify-between py-3">
-          <div className="flex gap-5">
-            <div className="flex items-center gap-2 text-gray-500">
+        <div className="flex items-center justify-between py-2 lg:py-3">
+          <div className="flex gap-2 text-xs lg:gap-5 lg:text-base">
+            <div className="flex items-center gap-1 text-gray-500 lg:gap-2">
               <FaBookOpen />
               <p className="text-sm">{lessons} Lessons</p>
             </div>
-            <div className="flex items-center gap-2 text-gray-500">
+            <div className="flex items-center gap-1 text-gray-500 lg:gap-2">
               <FaUsers />
               <p className="text-sm">{students} Students</p>
             </div>
@@ -107,8 +107,8 @@ function CourseCard({ cardDetails }) {
           </div>
         </div>
 
-        <div className="py-3">
-          <LinkButton href="" size="small" variant="primary">
+        <div className="py-2 lg:py-3">
+          <LinkButton href="" size="small" variant="outline">
             Enroll Now
           </LinkButton>
         </div>
