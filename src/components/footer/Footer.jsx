@@ -70,9 +70,10 @@ function Footer() {
             <hr className="w-1/4 h-1 text-black bg-black" />
           </div>
           <div className="flex gap-3">
-            {socialMedia.map((media) => (
-              <Link key={media} href="">
+            {socialMedia.map((media, index) => (
+              <Link key={index} href="">
                 <Image
+                  alt="img"
                   src={media}
                   width={500}
                   height={500}
