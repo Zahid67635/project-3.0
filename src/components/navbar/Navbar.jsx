@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between w-full px-4 py-2 bg-white border-b border-neutral-500">
+    <nav className="flex w-full px-4 py-2 bg-white border-b border-neutral-500">
       {/* Logo */}
       <div className="flex items-center lg:w-1/5">
         <Logo />

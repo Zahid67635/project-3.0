@@ -19,7 +19,7 @@ export default function Home() {
           src="/banners/banner2.jpg"
           alt="banner"
           priority
-          className="object-cover w-full max-w-[90rem] h-[40vh] xl:h-[90vh] mx-auto"
+          className="object-cover w-full h-[40vh] xl:h-[90vh]"
         />
         <div className="absolute left-0 right-0 justify-center hidden gap-2 lg:flex bottom-10">
           {categories.slice(0, 6).map((item) => (
@@ -57,7 +57,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 w-[360px] md:w-full">
           <h2 className="text-2xl font-bold">Popular Courses</h2>
           <Carousel responsive={responsive}>
             {courseCardData.map((item) => (

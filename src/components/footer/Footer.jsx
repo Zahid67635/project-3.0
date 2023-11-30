@@ -13,7 +13,7 @@ const socialMedia = [facebook, twitter, instagram, linkedIn];
 function Footer() {
   return (
     <footer>
-      <div className="grid gap-5 py-20 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 px-4 py-20 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="space-y-5">
             <Logo />
