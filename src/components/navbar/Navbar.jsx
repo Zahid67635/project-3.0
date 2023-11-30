@@ -20,7 +20,7 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="flex justify-between w-full p-4 bg-white">
+    <nav className="flex justify-between w-full py-4 bg-white">
       <div className="flex items-center w-1/5">
         <Logo />
       </div>
@@ -54,8 +54,8 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="items-center justify-end hidden w-4/5 gap-6 md:flex">
-        <div className="items-center hidden w-1/2 md:flex">
+      <div className="items-center justify-end hidden w-full gap-6 md:flex">
+        <div className="items-center hidden md:flex">
           <InputField placeholder="Search" />
         </div>
         <div
