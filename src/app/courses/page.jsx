@@ -12,6 +12,7 @@ import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
 import TertiaryLink from "@/components/buttons/TertiaryLink";
 import { useState } from "react";
+import { FaHome, FaAngleRight } from "react-icons/fa";
 
 const navItems = [
   { name: "Courses", href: "/courses" },
@@ -40,8 +41,24 @@ function Page() {
 
   return (
     <div className="space-y-10">
-      <div className="flex items-center justify-center h-32 text-3xl font-bold text-white bg-primary-500">
-        Courses
+      <div className="relative">
+        <Image
+          src="https://img.freepik.com/free-photo/book-with-green-board-background_1150-3837.jpg?w=826&t=st=1701254398~exp=1701254998~hmac=7afd51dd03ab52f09376f165d097ecafb6f4dfe950c189086e321bafadafee14"
+          width={1000}
+          height={500}
+          className="object-cover w-full h-36"
+        />
+        <div className="absolute w-full h-full bg-gradient-to-r from-[#151515] to-transparent top-0 text-white">
+          <h1 className="text-3xl font-bold text-center mt-14">Courses</h1>
+          <div className="flex items-center gap-2 mt-3 ml-5 font-medium">
+            <div className="flex items-center gap-2">
+              <FaHome />
+              <Link href="/">Home</Link>
+            </div>
+            <FaAngleRight />
+            <Link href="/courses">Courses</Link>
+          </div>
+        </div>
       </div>
 
       <section className="flex flex-col justify-between gap-3 md:items-center md:flex-row">
