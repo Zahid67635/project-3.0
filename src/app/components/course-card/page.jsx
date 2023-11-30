@@ -19,7 +19,9 @@ function page() {
   return (
     <div>
       <h1 className="mb-3 text-lg text-center">Course Card</h1>
-      <CourseCard cardDetails={cardDetails} />
+      <div className="sm:w-1/2 md:w-1/3 xl:w-1/4">
+        <CourseCard cardDetails={cardDetails} />
+      </div>
     </div>
   );
 }
