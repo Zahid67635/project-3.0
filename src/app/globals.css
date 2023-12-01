@@ -6,6 +6,9 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-*{
-  color: #2d2f31ec
+
+.react-multi-carousel-track {
+  display: flex;
+  gap: 20px;
 }
+

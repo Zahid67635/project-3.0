@@ -66,7 +66,7 @@ function SearchAndSelect({
         id={name}
         isClearable={isClearable}
         styles={customStyles}
-        placeholder="Search And Select Options"
+        placeholder={placeholder ? placeholder : "Search And Select Options"}
         options={options}
         onChange={onChange}
         noOptionsMessage={() => "No results were found"}
