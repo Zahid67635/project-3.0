@@ -4,7 +4,7 @@ import React from "react";
 function page() {
   return (
     <div>
-      <h1 className="text-center mb-3">Search And Select</h1>
+      <h1 className="mb-3 text-center">Search And Select</h1>
       <SearchAndSelect />
     </div>
   );

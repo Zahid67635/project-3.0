@@ -20,13 +20,9 @@ function SearchAndSelect({
   const customStyles = {
     control: (provided, state) => ({
       ...provided,
-      borderColor: !state.isFocused
-        ? provided.borderColor
-        : "rgba(117, 163, 163)",
+      borderColor: !state.isFocused ? provided.borderColor : "#D1D5DB",
       "&:hover": { borderColor: "none" },
-      boxShadow: state.isFocused
-        ? "0 0 0 2px rgba(117, 163, 163)"
-        : provided.boxShadow,
+      boxShadow: state.isFocused ? "0 0 0 2px #D1D5DB" : provided.boxShadow,
     }),
     option: (provided, state) => ({
       ...provided,

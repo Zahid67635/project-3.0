@@ -22,10 +22,11 @@ function InputField({
   autoComplete,
   readOnly,
   setInputValue,
+  children,
   ...props
 }) {
   const clearInput = () => {
-    setInputValue("");
+    value = "";
     onBlur({ target: { name, value: "" } });
   };
 
@@ -38,6 +39,7 @@ function InputField({
         {label}
       </label>
       <div className="relative">
+        {children}
         <input
           type={type}
           id={name}
@@ -51,7 +53,7 @@ function InputField({
           readOnly={readOnly}
           {...props}
         />
-        {value && (
+        {value && setInputValue && (
           <div className={clearButtonStyle} onClick={clearInput}>
             <HiMiniXCircle />
           </div>
