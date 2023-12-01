@@ -4,8 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import LinkButton from "@/components/buttons/LinkButton";
 import CourseCard from "@/components/courseCard/CourseCard";
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
+
 import { categories, courseCardData, responsive } from "@/data";
 import Image from "next/image";
 
