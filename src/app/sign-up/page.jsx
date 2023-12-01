@@ -40,7 +40,6 @@ function page() {
     });
   return (
     <div className="px-2 bg-white">
-      <Navbar />
       <div className="flex py-10">
         <div className="hidden w-3/5 md:block">
           <Image
@@ -218,7 +217,6 @@ function page() {
           </p>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
