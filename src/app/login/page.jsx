@@ -24,17 +24,17 @@ function page() {
       },
     });
   return (
-    <div className="flex flex-col items-center min-h-screen gap-5 py-10 md:justify-center md:py-0">
+    <div className="flex flex-col items-center md:min-w-[400px] min-w-[340px] min-h-[80vh] gap-5 py-10 md:justify-start md:pt-20">
       <Link href={`/`} className="flex items-center justify-center">
         <FaGraduationCap className="w-20 h-12" fill="#7c3aed" />
-        <span className="font-serif text-4xl font-bold text-gray-600">
+        <span className="font-serif text-3xl font-bold text-gray-600">
           eduwave
         </span>
       </Link>
       <div className="relative w-full bg-transparent rounded-xl">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col justify-center max-w-lg gap-5 px-4 pb-2 mx-auto"
+          className="flex flex-col justify-center gap-5 pb-2"
         >
           <h1 className="text-3xl font-bold text-center text-primary-600">
             Sign in
@@ -84,7 +84,7 @@ function page() {
 
           <button
             type="submit"
-            className="w-full p-1 py-2 mx-auto font-semibold text-white transition duration-300 outline outline-1 outline-black bg-primary-500 hover:bg-white hover:text-black hover:outline-primary-500 text-semibold"
+            className="w-full p-1 py-2 mx-auto mt-2 font-semibold text-white transition duration-300 outline outline-1 outline-black bg-primary-500 hover:bg-white hover:text-black hover:outline-primary-500 text-semibold"
           >
             Login
           </button>

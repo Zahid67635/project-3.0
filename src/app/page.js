@@ -57,9 +57,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="space-y-4 w-[360px] md:w-full">
+        <div className="space-y-4 w-[380px] sm:w-[464px] md:w-full ">
           <h2 className="text-2xl font-bold">Popular Courses</h2>
-          <Carousel responsive={responsive}>
+          <Carousel responsive={responsive} className="p-1">
             {courseCardData.map((item) => (
               <CourseCard key={item.id} cardDetails={item} />
             ))}

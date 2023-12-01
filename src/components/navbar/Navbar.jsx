@@ -13,6 +13,7 @@ import TertiaryLink from "../buttons/TertiaryLink";
 import RightSideDrawer from "../drawer/RightSideDrawer";
 import InputField from "../inputField/InputField";
 import Logo from "../logo/Logo";
+import { useRouter } from "next/navigation";
 
 const navItems = [
   { name: "Courses", href: "/courses" },
@@ -24,12 +25,13 @@ function Navbar() {
   const [isCategories, setIsCategories] = useState(false);
   const [desktopCategories, setDesktopCategories] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const router = useRouter();
   const handleTransform = () => {
     setIsOpen((prev) => !prev);
   };
 
   return (
-    <nav className="flex justify-between w-full px-4 py-2 bg-white border-b border-neutral-500">
+    <nav className="flex justify-between w-full px-4 py-2 bg-white">
       {/* Logo */}
       <div className="flex items-center lg:w-1/5">
         <Logo />
@@ -70,8 +72,10 @@ function Navbar() {
             </NavLink>
           ))}
         </div>
-        <Button>Login</Button>
-        <Button variant="outline">Sign up</Button>
+        <Button onClick={() => router.push("/login")}>Login</Button>
+        <Button onClick={() => router.push("/sign-up")} variant="outline">
+          Sign up
+        </Button>
       </div>
 
       {/* Hamburger Icon */}

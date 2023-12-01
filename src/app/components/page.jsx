@@ -13,7 +13,7 @@ const componentsList = [
 
 function page() {
   return (
-    <div className="flex flex-col min-h-screen gap-5 py-24 px-[20%] bg-slate-100">
+    <div className="flex flex-col min-h-screen gap-5 bg-slate-100">
       <div className="font-bold text-center">Common Components</div>
       <ul className="flex flex-col gap-2 list-disc">
         {componentsList.map((item) => {
